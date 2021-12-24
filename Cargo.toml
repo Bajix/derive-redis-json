@@ -1,10 +1,11 @@
 [package]
 edition = "2021"
-name = "redis_serde_json"
+name = "derive-redis-json"
 version = "0.1.1"
 authors = ["Naitik Shah <n@daaku.org>", "Cris Liao <clia@163.com>", "Thomas Sieverding <Thomas@bajix.com>"]
 description = "A derive to store and retrieve JSON values in redis encoded using serde."
 license = "MIT"
+repository = "https://github.com/Bajix/derive-redis-json/"
 
 [lib]
 proc-macro = true

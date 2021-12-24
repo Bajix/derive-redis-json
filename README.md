@@ -1,14 +1,18 @@
-# redis_serde_json
+# derive-redis-json
+
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![License](https://img.shields.io/badge/license-BSD-green.svg)
+[![Cargo](https://img.shields.io/crates/v/derive-redis-json.svg)](https://crates.io/crates/derive-redis-json)
+[![Documentation](https://docs.rs/derive-redis-json/badge.svg)](https://docs.rs/derive-redis-json)
 
 A derive to store and retrieve JSON values in redis encoded using serde.
-
 ## Example
 
 Cargo.toml:
 
 ```toml
 [dependencies]
-redis_serde_json = { git = "https://github.com/clia/redis_serde_json.git" }
+derive-redis-json = "0.1.1"
 ```
 
 main.rs:
@@ -18,7 +22,7 @@ use std::sync::Arc;
 
 use anyhow::Result;
 use deadpool_redis::{redis::cmd, Pool as RedisPool};
-use redis_serde_json::RedisJsonValue;
+use derive_redis_json::RedisJsonValue;
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, RedisJsonValue)]
