@@ -4,7 +4,7 @@ name = "redis_serde_json"
 version = "0.1.1"
 authors = ["Naitik Shah <n@daaku.org>", "Cris Liao <clia@163.com>", "Thomas Sieverding <Thomas@bajix.com>"]
 description = "A derive to store and retrieve JSON values in redis encoded using serde."
-license = "BSD"
+license = "MIT"
 
 [lib]
 proc-macro = true
