@@ -1,0 +1,17 @@
+[package]
+name = "redis-json"
+authors = ["Thomas Sieverding <Thomas@bajix.com>"]
+version = "0.0.1-beta-1"
+edition = "2021"
+description = "Extension traits to store and retrieve JSON values in Redis encoded using serde"
+readme = "./README.md"
+license = "MIT"
+repository = "https://github.com/Bajix/redis-json/"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+redis = "0.21"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0.30"
