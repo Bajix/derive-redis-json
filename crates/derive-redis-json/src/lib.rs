@@ -25,7 +25,7 @@ pub fn redis_json_value(input: TokenStream) -> TokenStream {
           out.write_arg(&serde_json::to_vec(self).expect("JSON encoding failed"));
         }
       }
-      
+
       impl redis::FromRedisValue for #struct_type {
         fn from_redis_value(v: &redis::Value) -> redis::RedisResult<Self> {
           match *v {
