@@ -29,7 +29,7 @@ pub fn redis_json_value(input: TokenStream) -> TokenStream {
       impl redis::FromRedisValue for #struct_type {
         fn from_redis_value(v: &redis::Value) -> redis::RedisResult<Self> {
           match *v {
-            redis::Value::Data(ref bytes) => Ok(serde_json::from_slice(bytes).map_err(|err| {
+            redis::Value::BulkString(ref bytes) => Ok(serde_json::from_slice(bytes).map_err(|err| {
               (
                 redis::ErrorKind::TypeError,
                 "JSON deserialize failed",
